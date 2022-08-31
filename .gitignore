@@ -1,2 +1,5 @@
 .bashrc
 .bash_history
+
+# ignore build directory
+build/

@@ -6,25 +6,12 @@ sudo apt-get install -y bison flex gzip gcc-multilib libz1 libncurses5 libbz2-1.
 
 export IDIR=$PWD"/build"
 
+tar -xf simpletools-*.tar -C $IDIR
+tar -xf simpleutils-*.tar -C $IDIR
+tar -xf simplesim-*.tar -C $IDIR
+
 # Will install SimpleScalar in ./build
 cd build/
-
-# A simple wget commandline would not comply the licence
-# SimpleScalar has to be downloaded manually
-#if [ ! -f "simplesim-3v0e.tgz" ]
-#then
- #   TEXT="Please:\n- Accept the licence then download the archive file: http://www.simplescalar.com/agreement.php3?simplesim-3v0e.tgz\n- Place the archive in the build/ directory.\n- Launch this script again"
-  #  echo -e $TEXT
-   # exit 1
-#fi
-
-#wget http://www.simplescalar.com/downloads/simpletools-2v0.tgz
-#wget http://www.simplescalar.com/downloads/simpleutils-2v0.tgz
-
-#gunzip  *.tgz
-tar -xf simpletools-*.tar
-tar -xf simpleutils-*.tar
-tar -xf simplesim-*.tar
 
 ### binutils Compilation ###
 cd binutils-*
