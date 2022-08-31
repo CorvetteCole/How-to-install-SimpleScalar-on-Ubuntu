@@ -6,6 +6,8 @@ sudo apt-get install -y bison flex gzip gcc-multilib libz1 libncurses5 libbz2-1.
 
 export IDIR=$PWD"/build"
 
+mkdir -p $IDIR
+
 tar -xf simpletools-*.tar -C $IDIR
 tar -xf simpleutils-*.tar -C $IDIR
 tar -xf simplesim-*.tar -C $IDIR
